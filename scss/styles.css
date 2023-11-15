@@ -12,10 +12,43 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: var(#494c6b);
-  background-color: var(#fafafa);
+  color: #494c6b;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+ul,
+p,
+h1,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 87.5%;
+  margin: 0 auto;
+}
+@media (min-width: 480px) {
+  .container {
+    max-width: 33.8125rem;
+  }
+}
+
+.flex {
+  display: flex;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-column {
+  flex-direction: column;
 }
 
 [data-todo-option=active] .todo__item:not([data-todo-state=active]),
@@ -34,18 +67,96 @@ body {
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
-  position: absolute;
+  background-color: #fafafa;
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
   z-index: -1;
 }
-@media (max-width: 374px) {
+@media (max-width: 479px) {
   .background-image {
     background-image: url("../assets/bg-mobile-light.jpg");
   }
 }
-@media (min-width: 375px) {
+@media (min-width: 480px) {
   .background-image {
     background-image: url("../assets/bg-desktop-light.jpg");
   }
+}
+
+.header {
+  margin-top: 4.37rem;
+  margin-bottom: 3rem;
+}
+.header--title {
+  color: #fff;
+  font-size: 1.675rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.5625rem;
+}
+@media (min-width: 480px) {
+  .header--title {
+    font-size: 2.5rem;
+    letter-spacing: 0.9375rem;
+  }
+}
+.header--theme img {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: block;
+}
+@media (min-width: 480px) {
+  .header--theme img {
+    width: 1.625rem;
+    height: 1.625rem;
+  }
+}
+
+.todo-wrapper {
+  border-radius: 0.3125rem;
+  background: #fff;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+}
+.todo-wrapper--check {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50px;
+  border: 1px solid #e3e4f1;
+  margin: 1.25rem 1.5rem;
+}
+.todo-wrapper--input {
+  width: 85%;
+}
+.todo-wrapper form input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: "Josefin Sans", sans-serif;
+  color: #494c6b;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.01563rem;
+}
+.todo-wrapper form input::-moz-placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  color: #9495a5;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.01563rem;
+}
+.todo-wrapper form input::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  color: #9495a5;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.01563rem;
 }/*# sourceMappingURL=styles.css.map */

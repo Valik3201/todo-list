@@ -41,19 +41,20 @@
     <!-- Main container for the todo list -->
     <div class="container">
       <!-- Header section with the todo title and theme switcher -->
-      <div class="header">
-        <div class="title">TODO</div>
-        <div class="theme">
-          <img src="assets/icon-sun.svg" />
+      <div class="header flex flex-jc-sb flex-ai-c">
+        <h1 class="header--title">TODO</h1>
+        <div class="header--theme">
+          <img src="assets/icon-moon.svg" />
         </div>
       </div>
 
       <!-- Section for adding a new todo item -->
-      <div class="new-todo">
-        <div class="check">
-          <div class="check-mark"></div>
+      <div class="todo-wrapper flex flex-ai-c">
+        <div class="todo-wrapper--check">
+          <div class="todo-wrapper--check--mark"></div>
         </div>
-        <div class="new-todo-input">
+
+        <div class="todo-wrapper--input">
           <!-- Form for submitting new todo item -->
           <form onsubmit="addItem(event)">
             <input

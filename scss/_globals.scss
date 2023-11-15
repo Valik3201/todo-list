@@ -15,10 +15,44 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: var($light-text-active);
-  background-color: var($light-bg);
+  color: $light-text-active;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+ul,
+p,
+h1,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 87.5%;
+  margin: 0 auto;
+
+  @include breakpoint-up(small) {
+    max-width: 33.8125rem;
+  }
+}
+
+// Flexbox
+
+.flex {
+  display: flex;
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-jc-c {
+    justify-content: center;
+  }
+  &-ai-c {
+    align-items: center;
+  }
+  &-column {
+    flex-direction: column;
+  }
 }
 
 [data-todo-option="active"] .todo__item:not([data-todo-state="active"]),
@@ -31,22 +65,4 @@ body {
 [data-todo-state="completed"] .todo__action_complete,
 [data-todo-state="deleted"] .todo__action_complete {
   display: none;
-}
-
-.background-image {
-  background-size: contain;
-  background-position: top;
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-
-  @include breakpoint-down("small") {
-    @include background-image($bg-light-mobile);
-  }
-
-  @include breakpoint-up("small") {
-    @include background-image($bg-light-desktop);
-  }
 }

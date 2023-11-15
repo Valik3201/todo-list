@@ -9,19 +9,23 @@ $dark-bg: #171823;
 $light-bg: #fafafa;
 $icon-color: #fff;
 $highlight-text: #3a7cfd;
+$header-text: #fff;
 
 // Light Theme
 $light-text-active: #494c6b;
 $light-text-inactive: #9495a5;
 $light-text-crossed: #d1d2da;
+$light-wrapper-bg: #fff;
+$light-border-checkmark: #e3e4f1;
 
 // Dark Theme
 $dark-text-active: #c8cbe7;
 $dark-text-inactive: #767992;
 $dark-text-crossed: #4d5067;
+$dark-wrapper-bg: #25273d;
+$dark-border-checkmark: #393a4b;
 
 // Font Sizes
-
 $font-sm: 0.875rem; // 14px
 $font-md: 1.125rem; // 18px
 $font-m-lg: 1.25rem; // 20px
