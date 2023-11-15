@@ -160,4 +160,51 @@ div {
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.01563rem;
+}
+
+.todo-items-wrapper {
+  background-color: #fff;
+  border-radius: 0.3125rem;
+  background: #fff;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  margin-top: 1.5rem;
+}
+.todo-items-wrapper .todo-item {
+  border-bottom: 1px solid #e3e4f1;
+  padding-top: 1.31rem;
+  padding-bottom: 1.5rem;
+}
+.todo-items-wrapper .todo-items-info {
+  color: #9495a5;
+  font-size: 0.875rem;
+  letter-spacing: -0.01213rem;
+  padding: 1rem 1.5rem 1.25rem 1.5rem;
+}
+.todo-items-wrapper .todo-items-info .items-statuses {
+  font-weight: 700;
+  gap: 1.19rem;
+}
+.todo-items-wrapper .todo-items-info .items-statuses .active {
+  color: #3a7cfd;
+}
+.todo-items-wrapper .todo-items-info .items-statuses :hover,
+.todo-items-wrapper .todo-items-info .items-statuses :focus {
+  color: #494c6b;
+  cursor: pointer;
+}
+.todo-items-wrapper .todo-items-info .items-clear:hover {
+  color: #494c6b;
+  cursor: pointer;
+}
+
+.reorder-instruction {
+  color: #9495a5;
+  text-align: center;
+  font-size: 0.875rem;
+  letter-spacing: -0.01213rem;
+  margin-top: 3rem;
+}
+
+p {
+  transition: color 0.25s ease-in;
 }/*# sourceMappingURL=styles.css.map */

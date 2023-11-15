@@ -1,0 +1,55 @@
+@import "variables";
+@import "mixins";
+
+.todo-items-wrapper {
+  background-color: $light-wrapper-bg;
+  border-radius: 0.3125rem;
+  background: #fff;
+  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+  margin-top: 1.5rem;
+
+  .todo-item {
+    border-bottom: 1px solid $light-border;
+    padding-top: 1.31rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .todo-items-info {
+    color: $light-text-inactive;
+    font-size: 0.875rem;
+    letter-spacing: -0.01213rem;
+    padding: 1rem 1.5rem 1.25rem 1.5rem;
+
+    .items-statuses {
+      font-weight: 700;
+      gap: 1.19rem;
+
+      .active {
+        color: $highlight-text;
+      }
+
+      :hover,
+      :focus {
+        color: $light-text-active;
+        cursor: pointer;
+      }
+    }
+
+    .items-clear:hover {
+      color: $light-text-active;
+      cursor: pointer;
+    }
+  }
+}
+
+.reorder-instruction {
+  color: $light-text-inactive;
+  text-align: center;
+  font-size: 0.875rem;
+  letter-spacing: -0.01213rem;
+  margin-top: 3rem;
+}
+
+p {
+  transition: color 0.25s ease-in;
+}
