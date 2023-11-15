@@ -1,0 +1,27 @@
+// Responsive Design
+$breakpoints-up: (
+  "large": 1440px,
+  "small": 375px,
+);
+
+$breakpoints-down: (
+  "large": 1439px,
+  "small": 374px,
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+
+// Background Image
+@mixin background-image($image) {
+  background-image: url($image);
+}

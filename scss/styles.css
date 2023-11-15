@@ -12,8 +12,8 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
-  background-color: #f0f0f0;
+  color: var(#494c6b);
+  background-color: var(#fafafa);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -28,4 +28,24 @@ body {
 [data-todo-state=completed] .todo__action_complete,
 [data-todo-state=deleted] .todo__action_complete {
   display: none;
+}
+
+.background-image {
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+@media (max-width: 374px) {
+  .background-image {
+    background-image: url("../assets/bg-mobile-light.jpg");
+  }
+}
+@media (min-width: 375px) {
+  .background-image {
+    background-image: url("../assets/bg-desktop-light.jpg");
+  }
 }/*# sourceMappingURL=styles.css.map */
