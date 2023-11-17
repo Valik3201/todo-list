@@ -1,12 +1,3 @@
-// import {
-//   collection,
-//   getDocs,
-//   addDoc,
-//   Timestamp,
-//   db,
-//   firebaseApp,
-// } from "firebase/firestore";
-
 import {
   collection,
   addDoc,
