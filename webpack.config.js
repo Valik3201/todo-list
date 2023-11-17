@@ -1,4 +1,5 @@
 const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   // The entry point file described above
@@ -19,4 +20,13 @@ module.exports = {
   devServer: {
     open: true,
   },
+
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "public", to: "public" },
+        { from: "public/index.html", to: "index.html" },
+      ],
+    }),
+  ],
 };
