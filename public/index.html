@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./scss/styles.css" />
 
     <!-- Include Firebase scripts for Firestore database -->
-    <script
+    <!-- <script
       src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js"
       type="module"
     ></script>
@@ -26,7 +26,7 @@
     <script
       src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"
       type="module"
-    ></script>
+    ></script> -->
 
     <!-- Include the custom Firebase configuration script -->
     <!-- <script src="../src/js/firebase.js"></script> -->
@@ -70,22 +70,12 @@
           <!-- Container for displaying individual todo items -->
           <div class="todo-items">
             <!-- Individual todo item with checkbox and text -->
-            <div class="todo-item flex flex-ai-c">
-              <div class="check">
-                <div class="check-mark checked">
-                  <img src="./assets/icon-check.svg" alt="Check Icon" />
-                </div>
-              </div>
-              <div class="todo-text checked">
-                Complete online JavaScript course
-              </div>
-            </div>
           </div>
 
           <!-- Information section for todo items -->
           <div class="todo-items-info flex flex-jc-sb flex-ai-c">
             <!-- Display the number of items left -->
-            <div class="items-left">5 items left</div>
+            <div class="items-left">items left</div>
 
             <!-- Filter options for displaying todo items -->
             <div class="items-statuses flex">
@@ -95,7 +85,7 @@
             </div>
 
             <!-- Option to clear completed todo items -->
-            <div class="items-clear">
+            <div class="items-clear" id="clear-completed">
               <p>Clear Completed</p>
             </div>
           </div>
