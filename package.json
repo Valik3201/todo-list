@@ -2,7 +2,6 @@
   "name": "todo-list",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/script.js",
   "homepage": "https://valik3201.github.io/todo-list/",
   "scripts": {
     "start": "webpack serve --mode=development --config webpack.config.js",
