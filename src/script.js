@@ -8,6 +8,8 @@ import {
   query,
   where,
   deleteDoc,
+  orderBy,
+  limit,
 } from "firebase/firestore";
 import { db } from "./firebase";
 import "./drag-and-drop";
@@ -20,9 +22,13 @@ const addItem = async function (event) {
     const todoCollection = collection(db, "todo-items");
 
     try {
+      const maxOrder = await getCurrentMaxOrder();
+
       const docRef = await addDoc(todoCollection, {
         text: text,
         status: "active",
+        createdAt: new Date().toISOString(),
+        order: maxOrder + 1,
       });
       console.log("Document written with ID: ", docRef.id);
       document.getElementById("todo-input").value = "";
@@ -36,6 +42,23 @@ const addItem = async function (event) {
 
 document.getElementById("todo-form").addEventListener("submit", addItem);
 
+async function getCurrentMaxOrder() {
+  const todoCollection = collection(db, "todo-items");
+  const orderedQuery = query(
+    todoCollection,
+    orderBy("order", "desc"),
+    limit(1)
+  );
+  const querySnapshot = await getDocs(orderedQuery);
+
+  if (querySnapshot.size > 0) {
+    const maxOrderTask = querySnapshot.docs[0].data();
+    return maxOrderTask.order;
+  } else {
+    return 0;
+  }
+}
+
 let currentFilter = "all";
 
 async function getItems() {
@@ -43,7 +66,8 @@ async function getItems() {
   let querySnapshot;
 
   if (currentFilter === "all") {
-    querySnapshot = await getDocs(todoCollection);
+    const orderedQuery = query(todoCollection, orderBy("createdAt", "desc"));
+    querySnapshot = await getDocs(orderedQuery);
   } else {
     const filteredQuery = query(
       todoCollection,
@@ -54,10 +78,14 @@ async function getItems() {
 
   let items = [];
   querySnapshot.forEach((doc) => {
-    items.push({
-      id: doc.id,
-      ...doc.data(),
-    });
+    const data = doc.data();
+
+    if ("createdAt" in data) {
+      items.push({
+        id: doc.id,
+        ...data,
+      });
+    }
   });
 
   generateItems(items);
