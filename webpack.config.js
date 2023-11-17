@@ -7,6 +7,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "public"),
     filename: "bundle.js",
+    publicPath: "/todo-list/",
   },
   // Optional and for development only. This provides the ability to
   // map the built code back to the original source format when debugging.
