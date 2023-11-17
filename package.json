@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "./src/script.js",
+  "homepage": "https://github.com/Valik3201/todo-list",
   "scripts": {
     "start": "webpack serve --mode=development --config webpack.config.js",
     "build": "webpack --mode=development --config webpack.config.js",
@@ -21,7 +22,6 @@
   "bugs": {
     "url": "https://github.com/Valik3201/todo-list/issues"
   },
-  "homepage": "https://github.com/Valik3201/todo-list#readme",
   "dependencies": {
     "firebase": "^10.6.0"
   },
