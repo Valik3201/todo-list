@@ -6,7 +6,7 @@ module.exports = {
   entry: "./src/script.js",
   // The location of the build folder described above
   output: {
-    path: path.resolve(__dirname, "public"),
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
   },
   // Optional and for development only. This provides the ability to
@@ -24,8 +24,9 @@ module.exports = {
   plugins: [
     new CopyWebpackPlugin({
       patterns: [
-        { from: "public", to: "public" },
         { from: "public/index.html", to: "index.html" },
+        { from: "public/scss", to: "scss" },
+        { from: "public/assets", to: "assets" },
       ],
     }),
   ],
