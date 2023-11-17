@@ -248,22 +248,31 @@ p {
 }
 
 .gu-mirror {
-  position: fixed !important;
-  margin: 0 !important;
-  z-index: 9999 !important;
+  position: fixed;
+  margin: 0;
+  z-index: 9999;
   opacity: 0.8;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-  filter: alpha(opacity=80);
+  background-color: #fff;
+  border-radius: 0.3125rem;
+  border: 1px solid #e3e4f1;
 }
 
 .gu-hide {
-  display: none !important;
+  display: none;
 }
 
 .gu-unselectable {
-  -webkit-user-select: none !important;
-  -moz-user-select: none !important;
-  user-select: none !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.gu-unselectable::-moz-selection {
+  background: transparent;
+}
+
+.gu-unselectable::selection {
+  background: transparent;
 }
 
 .gu-transit {
