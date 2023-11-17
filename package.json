@@ -21,7 +21,6 @@
   "bugs": {
     "url": "https://github.com/Valik3201/todo-list/issues"
   },
-  "homepage": "https://github.com/Valik3201/todo-list#readme",
   "dependencies": {
     "firebase": "^10.6.0"
   },
