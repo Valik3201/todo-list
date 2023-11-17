@@ -1,0 +1,21 @@
+@import "variables";
+@import "mixins";
+
+.background-image {
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: $light-bg;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+
+  @include breakpoint-down("small") {
+    @include background-image($bg-light-mobile);
+  }
+
+  @include breakpoint-up("small") {
+    @include background-image($bg-light-desktop);
+  }
+}
