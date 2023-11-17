@@ -10,6 +10,7 @@ import {
   deleteDoc,
 } from "firebase/firestore";
 import { db } from "./firebase";
+import "./drag-and-drop";
 
 const addItem = async function (event) {
   event.preventDefault();
