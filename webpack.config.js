@@ -1,6 +1,5 @@
 const path = require("path");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const GhPagesWebpackPlugin = require("gh-pages-webpack-plugin");
 
 module.exports = {
   // The entry point file described above
@@ -28,16 +27,6 @@ module.exports = {
         { from: "public", to: "public" },
         { from: "public/index.html", to: "index.html" },
       ],
-    }),
-    new GhPagesWebpackPlugin({
-      path: "./public",
-      options: {
-        message: "Update Home Page",
-        user: {
-          name: "Valik3201",
-          email: "valik3201@gmail.com",
-        },
-      },
     }),
   ],
 };

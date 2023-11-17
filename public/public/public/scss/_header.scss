@@ -1,0 +1,32 @@
+@import "variables";
+@import "mixins";
+
+.header {
+  margin-top: 4.37rem;
+  margin-bottom: 3rem;
+
+  &--title {
+    color: $header-text;
+    font-size: 1.675rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.5625rem;
+
+    @include breakpoint-up(small) {
+      font-size: 2.5rem;
+      letter-spacing: 0.9375rem;
+    }
+  }
+
+  &--theme img {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: block;
+
+    @include breakpoint-up(small) {
+      width: 1.625rem;
+      height: 1.625rem;
+    }
+  }
+}

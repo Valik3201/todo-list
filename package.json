@@ -22,8 +22,7 @@
     "url": "https://github.com/Valik3201/todo-list/issues"
   },
   "dependencies": {
-    "firebase": "^10.6.0",
-    "gh-pages-webpack-plugin": "^1.0.2"
+    "firebase": "^10.6.0"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
