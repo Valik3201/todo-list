@@ -435,31 +435,29 @@ div {
   margin: 0;
   z-index: 9999;
   opacity: 0.8;
-  background-color: #fff;
+  background-color: #25273d;
   border-radius: 0.3125rem;
-  border: 1px solid #e3e4f1;
+  border: 1px solid #393a4b;
 }
-
-.gu-hide {
+.gu-mirror.gu-hide {
   display: none;
 }
-
-.gu-unselectable {
+.gu-mirror.gu-unselectable {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-
-.gu-unselectable::-moz-selection {
+.gu-mirror.gu-unselectable::-moz-selection {
   background: transparent;
 }
-
-.gu-unselectable::selection {
+.gu-mirror.gu-unselectable::selection {
   background: transparent;
 }
-
-.gu-transit {
+.gu-mirror.gu-transit {
   opacity: 0.2;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
   filter: alpha(opacity=20);
+}
+.gu-mirror .cross-container {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */
