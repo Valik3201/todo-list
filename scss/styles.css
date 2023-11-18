@@ -21,6 +21,14 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+body {
+  background-color: #fafafa;
+}
+
+body.dark-theme {
+  background-color: #171823;
+}
+
 ul,
 p,
 h1,
@@ -71,9 +79,7 @@ div {
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
-  background-color: #fafafa;
   width: 100%;
-  min-height: 100vh;
   position: absolute;
   top: 0;
   z-index: -1;
@@ -93,9 +99,7 @@ div {
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
-  background-color: #171823;
   width: 100%;
-  min-height: 100vh;
   position: absolute;
   top: 0;
   z-index: -1;
@@ -279,6 +283,7 @@ div {
   background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
 }
 .light-theme .todo-text {
+  color: #494c6b;
   cursor: grab;
 }
 .light-theme .todo-text.checked {
@@ -423,6 +428,7 @@ div {
   background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
 }
 .dark-theme .todo-text {
+  color: #c8cbe7;
   cursor: grab;
 }
 .dark-theme .todo-text.checked {
