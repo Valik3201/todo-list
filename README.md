@@ -104,7 +104,7 @@ Webpack serves as the modular bundler for Firebase integration. It optimizes the
 
 ### Deployment
 
-The live demo is hosted on GitHub Pages. The gh-pages branch is used for deployment, and the live site can be accessed [here](https://valik3201.github.io/todo-list/).
+The live demo is hosted on GitHub Pages. The `gh-pages` branch is used for deployment, and the live site can be accessed [here](https://valik3201.github.io/todo-list/).
 
 ## Useful Resources
 
