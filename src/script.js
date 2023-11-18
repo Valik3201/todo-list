@@ -42,6 +42,8 @@ const addItem = async function (event) {
 
 document.getElementById("todo-form").addEventListener("submit", addItem);
 
+document.querySelector(".check-mark").addEventListener("click", addItem);
+
 async function getCurrentMaxOrder() {
   const todoCollection = collection(db, "todo-items");
   const orderedQuery = query(
@@ -92,9 +94,17 @@ async function getItems() {
 }
 
 document.querySelector(".items-statuses").addEventListener("click", (event) => {
-  const selectedStatus = event.target.innerText.toLowerCase();
-  currentFilter = selectedStatus;
-  getItems();
+  if (event.target.classList.contains("status-option")) {
+    document.querySelectorAll(".status-option").forEach((option) => {
+      option.classList.remove("active");
+    });
+
+    event.target.classList.add("active");
+
+    const selectedStatus = event.target.innerText.toLowerCase();
+    currentFilter = selectedStatus;
+    getItems();
+  }
 });
 
 function generateItems(items) {

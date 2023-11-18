@@ -69,6 +69,7 @@ div {
   background-repeat: no-repeat;
   background-color: #fafafa;
   width: 100%;
+  min-height: 100vh;
   position: absolute;
   top: 0;
   z-index: -1;
@@ -205,46 +206,43 @@ p {
 }
 
 .check {
-  flex-basis: 90px;
+  flex-basis: 4.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.check-mark {
-  width: 30px;
-  height: 30px;
+.check .check-mark {
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   border: 1px solid #e3e4f1;
-  transition: all 0.25s;
+  transition: all 0.25s ease-in;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.check-mark img {
-  visibility: hidden;
+.check .check-mark img {
+  opacity: 0;
+  transition: opacity 0.25s ease-in;
 }
-
-.check-mark.checked img,
-.check-mark:hover img {
-  visibility: visible;
+.check .check-mark.checked img, .check .check-mark:hover img {
+  opacity: 1;
 }
-
-.check-mark:hover {
-  border-color: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+.check .check-mark:hover {
   background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
   cursor: pointer;
 }
-
-.check-mark.checked {
-  background-color: pink;
+.check .check-mark.checked {
+  background-color: #fff;
   background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
 }
 
+.todo-text {
+  cursor: grab;
+}
 .todo-text.checked {
   text-decoration: line-through;
-  color: hsl(233, 14%, 35%);
+  color: #d1d2da;
 }
 
 .gu-mirror {
