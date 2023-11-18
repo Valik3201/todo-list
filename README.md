@@ -13,7 +13,7 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
   - [SCSS Theme Handling](#SCSS-theme-handling)
   - [Firebase Integration](#firebase-integration)
   - [Webpack](#webpack)
-  - [Drakuja.js](#drakuja-js)
+  - [Drakuja.js](#drakujajs)
   - [Deployment](#deployment)
   - [Useful resources](#useful-resources)
 - [Author](#author)
