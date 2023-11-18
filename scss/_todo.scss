@@ -94,44 +94,48 @@ p {
 }
 
 .check {
-  flex-basis: 90px;
+  flex-basis: 4.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .check-mark {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid $light-border;
+    transition: all 0.25s ease-in;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      opacity: 0;
+      transition: opacity 0.25s ease-in;
+    }
+
+    &.checked img,
+    &:hover img {
+      opacity: 1;
+    }
+
+    &:hover {
+      background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+      cursor: pointer;
+    }
+
+    &.checked {
+      background-color: $light-wrapper-bg;
+      background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+    }
+  }
 }
 
-.check-mark {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  border: 1px solid $light-border;
-  transition: all 0.25s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.todo-text {
+  cursor: grab;
 
-.check-mark img {
-  visibility: hidden;
-}
-
-.check-mark.checked img,
-.check-mark:hover img {
-  visibility: visible;
-}
-
-.check-mark:hover {
-  border-color: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
-  background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
-  cursor: pointer;
-}
-
-.check-mark.checked {
-  background-color: pink;
-  background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
-}
-
-.todo-text.checked {
-  text-decoration: line-through;
-  color: hsl(233, 14%, 35%);
+  &.checked {
+    text-decoration: line-through;
+    color: $light-text-crossed;
+  }
 }
