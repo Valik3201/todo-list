@@ -106,7 +106,7 @@ Webpack serves as the modular bundler for Firebase integration. It optimizes the
 
 The live demo is hosted on GitHub Pages. The gh-pages branch is used for deployment, and the live site can be accessed [here](https://valik3201.github.io/todo-list/).
 
-### Useful Resources
+## Useful Resources
 
 1. [Figma](https://www.figma.com/) - An indispensable tool for design, serving as the foundation for translating visual concepts into functional code. Figma's collaborative interface design platform facilitated a seamless integration between the design and development phases of the project. 🎨
 
