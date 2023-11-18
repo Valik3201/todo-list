@@ -18,7 +18,7 @@
     line-height: normal;
     letter-spacing: 0.5625rem;
 
-    @include breakpoint-up(small) {
+    @include breakpoint-up("mobile") {
       font-size: 2.5rem;
       letter-spacing: 0.9375rem;
     }
@@ -30,7 +30,7 @@
     display: block;
     cursor: pointer;
 
-    @include breakpoint-up(small) {
+    @include breakpoint-up("mobile") {
       width: 1.625rem;
       height: 1.625rem;
     }
