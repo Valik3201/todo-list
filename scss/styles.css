@@ -1,3 +1,13 @@
+body.light-theme {
+  color: #494c6b;
+  background-color: #fff;
+}
+
+body.dark-theme {
+  color: #c8cbe7;
+  background-color: #25273d;
+}
+
 *,
 *::before,
 *::after {
@@ -67,7 +77,6 @@ div {
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
-  background-color: #fafafa;
   width: 100%;
   min-height: 100vh;
   position: absolute;
@@ -77,11 +86,13 @@ div {
 @media (max-width: 479px) {
   .background-image {
     background-image: url("../assets/bg-mobile-light.jpg");
+    background-color: #fafafa;
   }
 }
 @media (min-width: 480px) {
   .background-image {
     background-image: url("../assets/bg-desktop-light.jpg");
+    background-color: #fafafa;
   }
 }
 
@@ -107,6 +118,7 @@ div {
   width: 1.25rem;
   height: 1.25rem;
   display: block;
+  cursor: pointer;
 }
 @media (min-width: 480px) {
   .header--theme img {

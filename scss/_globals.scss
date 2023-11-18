@@ -1,6 +1,11 @@
 @import "variables";
 @import "mixins";
 
+body {
+  color: map-get($selected-theme, text-active);
+  background-color: map-get($selected-theme, wrapper-bg);
+}
+
 *,
 *::before,
 *::after {

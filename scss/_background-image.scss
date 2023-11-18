@@ -1,22 +1,24 @@
 @import "variables";
 @import "mixins";
 
-.background-image {
-  background-size: contain;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-color: $light-bg;
-  width: 100%;
-  min-height: 100vh;
-  position: absolute;
-  top: 0;
-  z-index: -1;
+@include themify($themes) {
+  .background-image {
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-color: themed("background-color");
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: -1;
 
-  @include breakpoint-down("small") {
-    @include background-image($bg-light-mobile);
-  }
+    @include breakpoint-down("small") {
+      @include background-image(themed("background-mobile"));
+    }
 
-  @include breakpoint-up("small") {
-    @include background-image($bg-light-desktop);
+    @include breakpoint-up("small") {
+      @include background-image(themed("background-desktop"));
+    }
   }
 }

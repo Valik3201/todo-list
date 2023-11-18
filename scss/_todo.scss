@@ -3,7 +3,7 @@
 
 .todo-wrapper {
   border-radius: 0.3125rem;
-  background: $light-wrapper-bg;
+  background: map-get($selected-theme, wrapper-bg);
   box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
 
   &--input {
@@ -19,7 +19,7 @@
       border: none;
       outline: none;
       font-family: "Josefin Sans", sans-serif;
-      color: $light-text-active;
+      color: map-get($selected-theme, text-active);
       font-size: 1.125rem;
       font-style: normal;
       font-weight: 400;
@@ -29,7 +29,7 @@
 
     input::placeholder {
       font-family: "Josefin Sans", sans-serif;
-      color: $light-text-inactive;
+      color: map-get($selected-theme, text-inactive);
       font-size: 1.125rem;
       font-style: normal;
       font-weight: 400;
@@ -40,14 +40,14 @@
 }
 
 .todo-items-wrapper {
-  background-color: $light-wrapper-bg;
+  background-color: map-get($selected-theme, wrapper-bg);
   border-radius: 0.3125rem;
   background: #fff;
   box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
   margin-top: 1.5rem;
 
   .todo-item {
-    border-bottom: 1px solid $light-border;
+    border-bottom: 1px solid map-get($selected-theme, border);
     padding-top: 1.31rem;
     padding-bottom: 1.5rem;
     position: relative;
@@ -76,7 +76,7 @@
   }
 
   .todo-items-info {
-    color: $light-text-inactive;
+    color: map-get($selected-theme, text-inactive);
     font-size: 0.875rem;
     letter-spacing: -0.01213rem;
     padding: 1rem 1.5rem 1.25rem 1.5rem;
@@ -91,20 +91,20 @@
 
       :hover,
       :focus {
-        color: $light-text-active;
+        color: map-get($selected-theme, text-active);
         cursor: pointer;
       }
     }
 
     .items-clear:hover {
-      color: $light-text-active;
+      color: map-get($selected-theme, text-active);
       cursor: pointer;
     }
   }
 }
 
 .reorder-instruction {
-  color: $light-text-inactive;
+  color: map-get($selected-theme, text-inactive);
   text-align: center;
   font-size: 0.875rem;
   letter-spacing: -0.01213rem;
@@ -126,7 +126,7 @@ p {
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    border: 1px solid $light-border;
+    border: 1px solid map-get($selected-theme, border);
     transition: all 0.25s ease-in;
     display: flex;
     justify-content: center;
@@ -148,7 +148,7 @@ p {
     }
 
     &.checked {
-      background-color: $light-wrapper-bg;
+      background-color: map-get($selected-theme, wrapper-bg);
       background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
     }
   }
@@ -159,6 +159,6 @@ p {
 
   &.checked {
     text-decoration: line-through;
-    color: $light-text-crossed;
+    color: map-get($selected-theme, text-crossed);
   }
 }
