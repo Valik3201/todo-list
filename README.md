@@ -3,11 +3,11 @@
 This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve coding skills by building realistic projects. 
 
 <div align="left">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Firebase_Logo.svg/1200px-Firebase_Logo.svg.png" height="40" alt="firebase logo"  />
+  <img src="https://github.com/devicons/devicon/blob/master/icons/firebase/firebase-plain.svg" height="40" alt="firebase logo"  />
   <img width="12" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/2560px-Sass_Logo_Color.svg.png" height="40" alt="sass logo"  />
+  <img src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg" height="40" alt="sass logo"  />
   <img width="12" />
-  <img src="https://raw.githubusercontent.com/webpack/media/master/logo/logo-on-white-bg.png" height="40" alt="webpack logo"  />
+  <img src="https://github.com/devicons/devicon/blob/master/icons/webpack/webpack-original.svg" height="40" alt="webpack logo"  />
 </div>
 
 ## Table of contents
