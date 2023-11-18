@@ -236,6 +236,9 @@ div {
   color: #494c6b;
   cursor: pointer;
 }
+.light-theme .todo-items-wrapper .todo-items-info .items-clear {
+  transition: color 0.25s ease-in;
+}
 .light-theme .todo-items-wrapper .todo-items-info .items-clear:hover {
   color: #494c6b;
   cursor: pointer;
@@ -247,9 +250,6 @@ div {
   letter-spacing: -0.01213rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
-}
-.light-theme p {
-  transition: color 0.25s ease-in;
 }
 .light-theme .check {
   flex-basis: 4.5rem;
@@ -381,6 +381,9 @@ div {
   color: #c8cbe7;
   cursor: pointer;
 }
+.dark-theme .todo-items-wrapper .todo-items-info .items-clear {
+  transition: color 0.25s ease-in;
+}
 .dark-theme .todo-items-wrapper .todo-items-info .items-clear:hover {
   color: #c8cbe7;
   cursor: pointer;
@@ -392,9 +395,6 @@ div {
   letter-spacing: -0.01213rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
-}
-.dark-theme p {
-  transition: color 0.25s ease-in;
 }
 .dark-theme .check {
   flex-basis: 4.5rem;
