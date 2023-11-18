@@ -1,164 +1,167 @@
 @import "variables";
 @import "mixins";
 
-.todo-wrapper {
-  border-radius: 0.3125rem;
-  background: map-get($selected-theme, wrapper-bg);
-  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
+@include themify($themes) {
+  .todo-wrapper {
+    border-radius: 0.3125rem;
+    background: themed("wrapper-bg");
+    box-shadow: themed("shadow");
 
-  &--input {
-    width: 85%;
-    padding-top: 1.31rem;
-    padding-bottom: 1.5rem;
-  }
-
-  form {
-    input {
-      display: block;
-      width: 100%;
-      border: none;
-      outline: none;
-      font-family: "Josefin Sans", sans-serif;
-      color: map-get($selected-theme, text-active);
-      font-size: 1.125rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      letter-spacing: -0.01563rem;
+    &--input {
+      width: 85%;
+      padding-top: 1.31rem;
+      padding-bottom: 1.5rem;
     }
 
-    input::placeholder {
-      font-family: "Josefin Sans", sans-serif;
-      color: map-get($selected-theme, text-inactive);
-      font-size: 1.125rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      letter-spacing: -0.01563rem;
+    form {
+      input {
+        display: block;
+        width: 100%;
+        border: none;
+        outline: none;
+        font-family: "Josefin Sans", sans-serif;
+        color: themed("text-active");
+        background-color: themed("wrapper-bg");
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.01563rem;
+      }
+
+      input::placeholder {
+        font-family: "Josefin Sans", sans-serif;
+        color: themed("text-inactive");
+        font-size: 1.125rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.01563rem;
+      }
     }
   }
-}
 
-.todo-items-wrapper {
-  background-color: map-get($selected-theme, wrapper-bg);
-  border-radius: 0.3125rem;
-  background: #fff;
-  box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
-  margin-top: 1.5rem;
+  .todo-items-wrapper {
+    background-color: themed("wrapper-bg");
+    border-radius: 0.3125rem;
+    background: themed("wrapper-bg");
+    box-shadow: themed("shadow");
+    margin-top: 1.5rem;
 
-  .todo-item {
-    border-bottom: 1px solid map-get($selected-theme, border);
-    padding-top: 1.31rem;
-    padding-bottom: 1.5rem;
-    position: relative;
+    .todo-item {
+      border-bottom: 1px solid themed("border");
+      padding-top: 1.31rem;
+      padding-bottom: 1.5rem;
+      position: relative;
 
-    .cross-container {
-      display: none;
-      width: 1.125rem;
-      height: 1.125rem;
-      position: absolute;
-      right: 1.125rem;
-      top: 50%;
-      transform: translateY(-50%);
-      cursor: pointer;
-
-      img {
+      .cross-container {
+        display: none;
         width: 1.125rem;
         height: 1.125rem;
+        position: absolute;
+        right: 1.125rem;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+        img {
+          width: 1.125rem;
+          height: 1.125rem;
+        }
+      }
+
+      &:hover {
+        .cross-container {
+          display: block;
+        }
       }
     }
 
-    &:hover {
-      .cross-container {
-        display: block;
+    .todo-items-info {
+      color: themed("text-inactive");
+      font-size: 0.875rem;
+      letter-spacing: -0.01213rem;
+      padding: 1rem 1.5rem 1.25rem 1.5rem;
+
+      .items-statuses {
+        font-weight: 700;
+        gap: 1.19rem;
+
+        .active {
+          color: $highlight-text;
+        }
+
+        :hover,
+        :focus {
+          color: themed("text-active");
+          cursor: pointer;
+        }
       }
-    }
-  }
 
-  .todo-items-info {
-    color: map-get($selected-theme, text-inactive);
-    font-size: 0.875rem;
-    letter-spacing: -0.01213rem;
-    padding: 1rem 1.5rem 1.25rem 1.5rem;
-
-    .items-statuses {
-      font-weight: 700;
-      gap: 1.19rem;
-
-      .active {
-        color: $highlight-text;
-      }
-
-      :hover,
-      :focus {
-        color: map-get($selected-theme, text-active);
+      .items-clear:hover {
+        color: themed("text-active");
         cursor: pointer;
       }
     }
-
-    .items-clear:hover {
-      color: map-get($selected-theme, text-active);
-      cursor: pointer;
-    }
   }
-}
 
-.reorder-instruction {
-  color: map-get($selected-theme, text-inactive);
-  text-align: center;
-  font-size: 0.875rem;
-  letter-spacing: -0.01213rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
+  .reorder-instruction {
+    color: themed("text-inactive");
+    text-align: center;
+    font-size: 0.875rem;
+    letter-spacing: -0.01213rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
 
-p {
-  transition: color 0.25s ease-in;
-}
+  p {
+    transition: color 0.25s ease-in;
+  }
 
-.check {
-  flex-basis: 4.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  .check-mark {
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 50%;
-    border: 1px solid map-get($selected-theme, border);
-    transition: all 0.25s ease-in;
+  .check {
+    flex-basis: 4.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    img {
-      opacity: 0;
-      transition: opacity 0.25s ease-in;
-    }
+    .check-mark {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      border: 1px solid themed("border");
+      transition: all 0.25s ease-in;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    &.checked img,
-    &:hover img {
-      opacity: 1;
-    }
+      img {
+        opacity: 0;
+        transition: opacity 0.25s ease-in;
+      }
 
-    &:hover {
-      background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
-      cursor: pointer;
-    }
+      &.checked img,
+      &:hover img {
+        opacity: 1;
+      }
 
-    &.checked {
-      background-color: map-get($selected-theme, wrapper-bg);
-      background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+      &:hover {
+        background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+        cursor: pointer;
+      }
+
+      &.checked {
+        background-color: themed("wrapper-bg");
+        background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+      }
     }
   }
-}
 
-.todo-text {
-  cursor: grab;
+  .todo-text {
+    cursor: grab;
 
-  &.checked {
-    text-decoration: line-through;
-    color: map-get($selected-theme, text-crossed);
+    &.checked {
+      text-decoration: line-through;
+      color: themed("text-crossed");
+    }
   }
 }
