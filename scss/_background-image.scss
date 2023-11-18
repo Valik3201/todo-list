@@ -11,11 +11,11 @@
     top: 0;
     z-index: -1;
 
-    @include breakpoint-down("small") {
+    @include breakpoint-down("mobile") {
       @include background-image(themed("background-mobile"));
     }
 
-    @include breakpoint-up("small") {
+    @include breakpoint-up("mobile") {
       @include background-image(themed("background-desktop"));
     }
   }

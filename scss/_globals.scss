@@ -34,8 +34,10 @@ body {
   background-color: $light-bg;
 }
 
-body.dark-theme {
-  background-color: $dark-bg;
+body {
+  &.dark-theme {
+    background-color: $dark-bg;
+  }
 }
 
 ul,
@@ -50,7 +52,7 @@ div {
   max-width: 87.5%;
   margin: 0 auto;
 
-  @include breakpoint-up(small) {
+  @include breakpoint-up(tablet) {
     max-width: 33.8125rem;
   }
 }

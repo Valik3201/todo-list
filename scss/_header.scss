@@ -2,8 +2,13 @@
 @import "mixins";
 
 .header {
-  margin-top: 4.37rem;
-  margin-bottom: 3rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+
+  @include breakpoint-up("mobile") {
+    margin-top: 4.37rem;
+    margin-bottom: 3rem;
+  }
 
   &--title {
     color: $header-text;
