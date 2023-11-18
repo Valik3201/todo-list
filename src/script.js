@@ -13,6 +13,7 @@ import {
 } from "firebase/firestore";
 import { db } from "./firebase";
 import "./drag-and-drop";
+import "./theme";
 
 const addItem = async function (event) {
   event.preventDefault();

@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+* {
+  transition-duration: 0.5s;
+}
+
 html,
 body {
   margin: 0;
