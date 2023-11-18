@@ -602,7 +602,39 @@ div {
   color: #4d5067;
 }
 
-.gu-mirror {
+.light-theme .gu-mirror {
+  position: fixed;
+  margin: 0;
+  z-index: 9999;
+  opacity: 0.8;
+  background-color: #fff;
+  border-radius: 0.3125rem;
+  border: 1px solid #e3e4f1;
+}
+.light-theme .gu-mirror.gu-hide {
+  display: none;
+}
+.light-theme .gu-mirror.gu-unselectable {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.light-theme .gu-mirror.gu-unselectable::-moz-selection {
+  background: transparent;
+}
+.light-theme .gu-mirror.gu-unselectable::selection {
+  background: transparent;
+}
+.light-theme .gu-mirror.gu-transit {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+}
+.light-theme .gu-mirror .cross-container {
+  display: none;
+}
+
+.dark-theme .gu-mirror {
   position: fixed;
   margin: 0;
   z-index: 9999;
@@ -611,25 +643,25 @@ div {
   border-radius: 0.3125rem;
   border: 1px solid #393a4b;
 }
-.gu-mirror.gu-hide {
+.dark-theme .gu-mirror.gu-hide {
   display: none;
 }
-.gu-mirror.gu-unselectable {
+.dark-theme .gu-mirror.gu-unselectable {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-.gu-mirror.gu-unselectable::-moz-selection {
+.dark-theme .gu-mirror.gu-unselectable::-moz-selection {
   background: transparent;
 }
-.gu-mirror.gu-unselectable::selection {
+.dark-theme .gu-mirror.gu-unselectable::selection {
   background: transparent;
 }
-.gu-mirror.gu-transit {
+.dark-theme .gu-mirror.gu-transit {
   opacity: 0.2;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
   filter: alpha(opacity=20);
 }
-.gu-mirror .cross-container {
+.dark-theme .gu-mirror .cross-container {
   display: none;
 }/*# sourceMappingURL=styles.css.map */
