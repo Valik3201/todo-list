@@ -2,13 +2,15 @@
 
 // Responsive Design
 $breakpoints-up: (
-  "large": 1440px,
-  "small": 480px,
+  "desktop": 1440px,
+  "tablet": 768px,
+  "mobile": 480px,
 );
 
 $breakpoints-down: (
-  "large": 1439px,
-  "small": 479px,
+  "desktop": 1439px,
+  "tablet": 767px,
+  "mobile": 479px,
 );
 
 @mixin breakpoint-up($size) {

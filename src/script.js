@@ -94,18 +94,20 @@ async function getItems() {
   generateItems(items);
 }
 
-document.querySelector(".items-statuses").addEventListener("click", (event) => {
-  if (event.target.classList.contains("status-option")) {
-    document.querySelectorAll(".status-option").forEach((option) => {
-      option.classList.remove("active");
-    });
+document.querySelectorAll(".items-statuses").forEach((element) => {
+  element.addEventListener("click", (event) => {
+    if (event.target.classList.contains("status-option")) {
+      document.querySelectorAll(".status-option").forEach((option) => {
+        option.classList.remove("active");
+      });
 
-    event.target.classList.add("active");
+      event.target.classList.add("active");
 
-    const selectedStatus = event.target.innerText.toLowerCase();
-    currentFilter = selectedStatus;
-    getItems();
-  }
+      const selectedStatus = event.target.innerText.toLowerCase();
+      currentFilter = selectedStatus;
+      getItems();
+    }
+  });
 });
 
 // JavaScript
