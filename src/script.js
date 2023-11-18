@@ -107,6 +107,7 @@ document.querySelector(".items-statuses").addEventListener("click", (event) => {
   }
 });
 
+// JavaScript
 function generateItems(items) {
   let todoItems = [];
   let activeItemCount = 0;
@@ -114,6 +115,19 @@ function generateItems(items) {
   items.forEach((item) => {
     let todoItem = document.createElement("div");
     todoItem.classList.add("todo-item", "flex", "flex-ai-c");
+
+    let crossContainer = document.createElement("div");
+    crossContainer.classList.add("cross-container");
+    let crossIcon = document.createElement("img");
+    crossIcon.src = "./assets/icon-cross.svg";
+    crossIcon.alt = "Icon cross";
+    crossContainer.appendChild(crossIcon);
+
+    // Add an event listener to handle cross icon click
+    crossIcon.addEventListener("click", function () {
+      removeTodoItem(item.id);
+    });
+
     let checkContainer = document.createElement("div");
     checkContainer.classList.add("check");
     let checkMark = document.createElement("div");
@@ -135,6 +149,7 @@ function generateItems(items) {
       activeItemCount++;
     }
 
+    todoItem.appendChild(crossContainer);
     todoItem.appendChild(checkContainer);
     todoItem.appendChild(todoText);
     todoItems.push(todoItem);
@@ -143,6 +158,25 @@ function generateItems(items) {
   document.querySelector(".todo-items").replaceChildren(...todoItems);
 
   updateItemsLeftText(activeItemCount);
+}
+
+async function removeTodoItem(itemId) {
+  const todoCollection = collection(db, "todo-items");
+
+  try {
+    const todoDoc = await getDoc(doc(todoCollection, itemId));
+
+    if (todoDoc.exists()) {
+      await deleteDoc(todoDoc.ref);
+      console.log("Todo item removed: ", itemId);
+
+      getItems();
+    } else {
+      console.log("Todo item not found: ", itemId);
+    }
+  } catch (error) {
+    console.error("Error removing todo item: ", error);
+  }
 }
 
 function updateItemsLeftText(count) {
