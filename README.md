@@ -52,7 +52,7 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
 
 In SCSS, I employed the following mixin and function to handle themes:
 
-```
+```scss
 // Mixin for handling themes
 @mixin themify($themes) {
   @each $name, $values in $themes {
