@@ -98,9 +98,13 @@
         }
       }
 
-      .items-clear:hover {
-        color: themed(text-active);
-        cursor: pointer;
+      .items-clear {
+        transition: color 0.25s ease-in;
+
+        &:hover {
+          color: themed(text-active);
+          cursor: pointer;
+        }
       }
     }
   }
@@ -112,10 +116,6 @@
     letter-spacing: -0.01213rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
-  }
-
-  p {
-    transition: color 0.25s ease-in;
   }
 
   .check {
