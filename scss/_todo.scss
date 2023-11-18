@@ -50,6 +50,29 @@
     border-bottom: 1px solid $light-border;
     padding-top: 1.31rem;
     padding-bottom: 1.5rem;
+    position: relative;
+
+    .cross-container {
+      display: none;
+      width: 1.125rem;
+      height: 1.125rem;
+      position: absolute;
+      right: 1.125rem;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+
+      img {
+        width: 1.125rem;
+        height: 1.125rem;
+      }
+    }
+
+    &:hover {
+      .cross-container {
+        display: block;
+      }
+    }
   }
 
   .todo-items-info {

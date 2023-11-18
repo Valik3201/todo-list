@@ -168,6 +168,24 @@ div {
   border-bottom: 1px solid #e3e4f1;
   padding-top: 1.31rem;
   padding-bottom: 1.5rem;
+  position: relative;
+}
+.todo-items-wrapper .todo-item .cross-container {
+  display: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  position: absolute;
+  right: 1.125rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.todo-items-wrapper .todo-item .cross-container img {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.todo-items-wrapper .todo-item:hover .cross-container {
+  display: block;
 }
 .todo-items-wrapper .todo-items-info {
   color: #9495a5;
