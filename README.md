@@ -42,7 +42,11 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
 
 ## Screenshot
 
-![](./screenshot.jpg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/Valik3201/todo-list/blob/main/public/assets/design-dark.png">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/Valik3201/todo-list/blob/main/public/assets/design-light.png">
+  <img alt="Responsive Design Preview" src="https://github.com/Valik3201/todo-list/blob/main/public/assets/design-dark.png" width="100%">
+</picture>
 
 ## Links
 
