@@ -2,6 +2,14 @@
 
 This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve coding skills by building realistic projects. 
 
+<div align="left">
+  <img src="https://github.com/devicons/devicon/blob/master/icons/firebase/firebase-plain.svg" height="40" alt="firebase logo"  />
+  <img width="12" />
+  <img src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg" height="40" alt="sass logo"  />
+  <img width="12" />
+  <img src="https://github.com/devicons/devicon/blob/master/icons/webpack/webpack-original.svg" height="40" alt="webpack logo"  />
+</div>
+
 ## Table of contents
 
 - [Overview](#overview)
