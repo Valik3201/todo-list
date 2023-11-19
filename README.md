@@ -50,8 +50,8 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
 
 ## Links
 
-- [Solution URL](https://www.frontendmentor.io/solutions/todo-app-using-scss-firebase-webpack-and-draculajs-ABWGLIIuwr)
-- [Live Site URL](https://valik3201.github.io/todo-list/)
+- [Solution](https://www.frontendmentor.io/solutions/todo-app-using-scss-firebase-webpack-and-draculajs-ABWGLIIuwr)
+- [Live Site](https://valik3201.github.io/todo-list/)
 
 ## My Process
 
