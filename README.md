@@ -120,16 +120,16 @@ Webpack serves as the modular bundler for Firebase integration. It optimizes the
 
 Enhance user experience with the power of drag-and-drop using Dragula.js. Dragula.js has been seamlessly integrated into the project to provide an intuitive and visually appealing way to organize todos.
 
-The simplicity of Dragula.js enables smooth drag-and-drop interactions. Users can effortlessly grab a todo item, drag it to the desired position, and drop it with ease. Whether tasks need prioritization or todos require rearrangement, Drakula.js ensures a delightful and responsive experience.
+The simplicity of Dragula.js enables smooth drag-and-drop interactions. Users can effortlessly grab a todo item, drag it to the desired position, and drop it with ease. Whether tasks need prioritization or todos require rearrangement, Dragula.js ensures a delightful and responsive experience.
 
 ```javascript
 import dragula from "dragula";
 
-// Drakula.js is initialized on the todo-items container
+// Dragula.js is initialized on the todo-items container
 const drake = dragula([document.querySelector(".todo-items")]);
 ```
 
-Now, todo management is not only functional but also a pleasure, thanks to the elegant integration of Drakula.js.
+Now, todo management is not only functional but also a pleasure, thanks to the elegant integration of Dragula.js.
 
 ### Deployment
 
