@@ -60,7 +60,7 @@ This is a solution to the [Todo app challenge on Frontend Mentor](https://www.fr
 - SCSS for enhanced styling 🎨
 - Firebase for seamless data management 🔥
 - Webpack for efficient bundling and optimization ⚙️
-- `Drakula.js` for drag-and-drop functionality in managing todos 🌓
+- `Dragula.js` for drag-and-drop functionality in managing todos 🌓
 
 ### SCSS Theme Handling
 
