@@ -4,6 +4,12 @@ function toggleTheme() {
   const currentTheme = body.classList.contains("dark-theme") ? "dark" : "light";
   const newTheme = currentTheme === "dark" ? "light" : "dark";
 
+  // Change the theme icon before updating the class to avoid flickering
+  const themeIcon = document.getElementById("theme-icon");
+  themeIcon.src =
+    newTheme === "dark" ? "./assets/icon-sun.svg" : "./assets/icon-moon.svg";
+  themeIcon.alt = newTheme === "dark" ? "Sun Icon" : "Moon Icon";
+
   // Remove the current theme class and add the new theme class
   body.classList.remove(`${currentTheme}-theme`);
   body.classList.add(`${newTheme}-theme`);
@@ -19,6 +25,12 @@ function setTheme() {
 
   // Add the saved theme class to the body
   body.classList.add(`${savedTheme}-theme`);
+
+  // Set the initial theme icon
+  const themeIcon = document.getElementById("theme-icon");
+  themeIcon.src =
+    savedTheme === "dark" ? "./assets/icon-sun.svg" : "./assets/icon-moon.svg";
+  themeIcon.alt = savedTheme === "dark" ? "Sun Icon" : "Moon Icon";
 }
 
 // Set the initial theme when the page loads
