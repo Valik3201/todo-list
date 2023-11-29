@@ -1,6 +1,11 @@
-// Function to toggle between light and dark themes
+/**
+ * Toggles between light and dark themes, updates the theme icon, and saves the selected theme to localStorage.
+ */
 function toggleTheme() {
+  // Get a reference to the body element
   const body = document.body;
+
+  // Determine the current theme and the new theme
   const currentTheme = body.classList.contains("dark-theme") ? "dark" : "light";
   const newTheme = currentTheme === "dark" ? "light" : "dark";
 
@@ -18,9 +23,14 @@ function toggleTheme() {
   localStorage.setItem("theme", newTheme);
 }
 
-// Function to set the theme based on localStorage or default to light theme
+/**
+ * Sets the theme based on localStorage or defaults to the light theme.
+ */
 function setTheme() {
+  // Retrieve the saved theme from localStorage or default to light
   const savedTheme = localStorage.getItem("theme") || "light";
+
+  // Get a reference to the body element
   const body = document.body;
 
   // Add the saved theme class to the body
