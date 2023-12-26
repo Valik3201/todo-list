@@ -2,13 +2,10 @@
 
 This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve coding skills by building realistic projects. 
 
-<div align="left">
-  <img src="https://github.com/devicons/devicon/blob/master/icons/firebase/firebase-plain.svg" height="40" alt="firebase logo"  />
-  <img width="12" />
-  <img src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg" height="40" alt="sass logo"  />
-  <img width="12" />
-  <img src="https://github.com/devicons/devicon/blob/master/icons/webpack/webpack-original.svg" height="40" alt="webpack logo"  />
-</div>
+![Firebase Badge](https://img.shields.io/badge/Firebase-FFCA28?logo=firebase&logoColor=000&style=flat)
+![Sass Badge](https://img.shields.io/badge/Sass-C69?logo=sass&logoColor=fff&style=flat)
+![Webpack Badge](https://img.shields.io/badge/Webpack-8DD6F9?logo=webpack&logoColor=000&style=flat)
+![GitHub Pages Badge](https://img.shields.io/badge/GitHub%20Pages-222?logo=githubpages&logoColor=fff&style=flat)
 
 ## Table of contents
 
@@ -145,9 +142,8 @@ The live demo is hosted on GitHub Pages. The `gh-pages` branch is used for deplo
 
 ## Author
 
-- GitHub - [Valik3201](https://github.com/Valik3201)
-- Frontend Mentor - [@Valik3201](https://www.frontendmentor.io/profile/Valik3201)
-- LinkedIn - [Valentyn Chernetskyi](https://www.linkedin.com/in/valentynchernetskyi/)
+[![Frontend Mentor Badge](https://img.shields.io/badge/Frontend%20Mentor-3F54A3?logo=frontendmentor&logoColor=fff&style=flat)](https://www.frontendmentor.io/profile/Valik3201)
+[![LinkedIn Badge](https://img.shields.io/badge/LinkedIn-0A66C2?logo=linkedin&logoColor=fff&style=flat)](https://www.linkedin.com/in/valentynchernetskyi/)
 
 
 Feel free to explore the code and provide feedback!
