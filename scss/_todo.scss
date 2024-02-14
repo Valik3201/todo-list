@@ -1,0 +1,241 @@
+@import "variables";
+@import "mixins";
+
+@include themify($themes) {
+  .todo-wrapper {
+    border-radius: 0.3125rem;
+    background: themed(wrapper-bg);
+    box-shadow: themed(shadow);
+
+    &--input {
+      width: 85%;
+      padding-top: 1.31rem;
+      padding-bottom: 1.5rem;
+    }
+
+    form {
+      input {
+        display: block;
+        width: 100%;
+        border: none;
+        outline: none;
+        font-family: "Josefin Sans", sans-serif;
+        color: themed(text-active);
+        background-color: themed(wrapper-bg);
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.01044rem;
+
+        @include breakpoint-up("mobile") {
+          font-size: 1.125rem;
+          letter-spacing: -0.01563rem;
+        }
+      }
+
+      input::placeholder {
+        font-family: "Josefin Sans", sans-serif;
+        color: themed(text-inactive);
+        font-size: 0.75rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.01044rem;
+
+        @include breakpoint-up("mobile") {
+          font-size: 1.125rem;
+          letter-spacing: -0.01563rem;
+        }
+      }
+    }
+  }
+
+  .todo-items-wrapper {
+    background-color: themed(wrapper-bg);
+    border-radius: 0.3125rem;
+    background: themed(wrapper-bg);
+    box-shadow: themed(shadow);
+    margin-top: 1.5rem;
+
+    .todo-item {
+      border-bottom: 1px solid themed(border);
+      padding-top: 1.31rem;
+      padding-bottom: 1.5rem;
+      position: relative;
+
+      .cross-container {
+        display: none;
+        width: 1.125rem;
+        height: 1.125rem;
+        position: absolute;
+        right: 1.125rem;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+
+        img {
+          width: 1.125rem;
+          height: 1.125rem;
+        }
+      }
+
+      &:hover {
+        .cross-container {
+          display: block;
+        }
+      }
+    }
+
+    .todo-items-info {
+      color: themed(text-inactive);
+      font-size: 0.875rem;
+      letter-spacing: -0.01213rem;
+      padding: 1rem 1.5rem 1.25rem 1.5rem;
+
+      .items-left {
+        font-size: 0.75rem;
+
+        @include breakpoint-up("mobile") {
+          font-size: 0.875rem;
+          letter-spacing: -0.01563rem;
+        }
+      }
+
+      .items-statuses {
+        font-weight: 700;
+        gap: 1.19rem;
+
+        @include breakpoint-down("mobile") {
+          display: none;
+        }
+
+        .active {
+          color: $highlight-text;
+        }
+
+        :hover,
+        :focus {
+          color: themed(text-active);
+          cursor: pointer;
+        }
+      }
+
+      .items-clear {
+        font-size: 0.75rem;
+        letter-spacing: -0.01044rem;
+        transition: color 0.25s ease-in;
+
+        @include breakpoint-up("mobile") {
+          font-size: 0.875rem;
+          letter-spacing: -0.01213rem;
+        }
+
+        &:hover {
+          color: themed(text-active);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .items-statuses {
+    &.mobile {
+      display: none;
+      font-weight: 700;
+      gap: 1.19rem;
+      margin-top: 1rem;
+      background-color: themed(wrapper-bg);
+      border-radius: 0.3125rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+
+      @include breakpoint-down("mobile") {
+        display: flex;
+      }
+
+      .active {
+        color: $highlight-text;
+      }
+
+      :hover,
+      :focus {
+        color: themed(text-active);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .reorder-instruction {
+    color: themed(text-inactive);
+    text-align: center;
+    font-size: 0.875rem;
+    letter-spacing: -0.01213rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .check {
+    flex-basis: 3.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include breakpoint-up("mobile") {
+      flex-basis: 4.5rem;
+    }
+
+    .check-mark {
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 50%;
+      border: 1px solid themed(border);
+      transition: all 0.25s ease-in;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include breakpoint-up("mobile") {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      img {
+        opacity: 0;
+        transition: opacity 0.25s ease-in;
+      }
+
+      &.checked img,
+      &:hover img {
+        opacity: 1;
+      }
+
+      &:hover {
+        background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+        cursor: pointer;
+      }
+
+      &.checked {
+        background-color: themed(wrapper-bg);
+        background: linear-gradient(135deg, #55ddff 0%, #c058f3 100%);
+      }
+    }
+  }
+
+  .todo-text {
+    font-size: 0.75rem;
+    letter-spacing: -0.01044rem;
+    color: themed(text-active);
+    cursor: grab;
+
+    @include breakpoint-up("mobile") {
+      font-size: 1.125rem;
+      letter-spacing: -0.01563rem;
+    }
+
+    &.checked {
+      text-decoration: line-through;
+      color: themed(text-crossed);
+    }
+  }
+}

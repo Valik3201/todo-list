@@ -1,0 +1,22 @@
+@import "variables";
+@import "mixins";
+
+@include themify($themes) {
+  .background-image {
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+    @include breakpoint-down("mobile") {
+      @include background-image(themed("background-mobile"));
+    }
+
+    @include breakpoint-up("mobile") {
+      @include background-image(themed("background-desktop"));
+    }
+  }
+}
